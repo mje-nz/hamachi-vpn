@@ -2,6 +2,19 @@
 
 Containerized Hamachi VPN
 
+To set up:
+
+```
+docker compose up -d
+docker compose exec hamachi bash
+# Then whatever hamachi commands you need, e.g.
+hamachi login
+hamachi join <network-id> <password>
+```
+
+
+Original readme follows.
+
 <!-- TOC -->
 
 - [1. hamachi-vpn](#1-hamachi-vpn)

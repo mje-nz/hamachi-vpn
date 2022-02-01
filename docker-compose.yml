@@ -1,13 +1,10 @@
 version: "3"
 services:
   hamachi:
-    build: hamachi
-    container_name: hamachi
+    image: mjenz/hamachi:2.1.0.203
     restart: unless-stopped
     volumes:
-      - config:/var/lib/logmein-hamachi:rw
-      - /etc/localtime:/etc/localtime
+      - /var/lib/logmein-hamachi:/var/lib/logmein-hamachi:rw
+      - /etc/localtime:/etc/localtime:ro
     privileged: true
     network_mode: "host"
-    environment:
-      - ACCOUNT=<ACCOUNT EMAIL>
